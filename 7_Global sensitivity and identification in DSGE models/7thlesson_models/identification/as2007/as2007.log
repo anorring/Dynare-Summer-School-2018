@@ -1,0 +1,143 @@
+Starting Dynare (version 4.5.5).
+Starting preprocessing of the model file ...
+Found 8 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+ - order 2
+ - derivatives of Jacobian/Hessian w.r. to parameters
+Computing dynamic model derivatives:
+ - order 1
+ - order 2
+ - derivatives of Jacobian/Hessian w.r. to parameters
+Processing outputs ...
+done
+Preprocessing completed.
+
+STEADY-STATE RESULTS:
+
+pie  		 0
+y    		 0
+R    		 0
+g    		 0
+z    		 0
+YGR  		 0.5
+INFL 		 4
+INT  		 6.4
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+               0                0                0
+            0.65             0.65                0
+          0.7123           0.7123                0
+            0.95             0.95                0
+           1.016            1.016                0
+           1.328            1.328                0
+       2.204e+16       -2.204e+16                0
+       1.052e+17       -1.052e+17                0
+
+
+There are 4 eigenvalue(s) larger than 1 in modulus 
+for 4 forward-looking variable(s)
+
+The rank condition is verified.
+
+85.0% of the prior support gives unique saddle-path solution.
+ 0.0% of the prior support gives explosive dynamics.
+15.0% of the prior support gives indeterminacy.
+
+
+No correlation term with pvalue <0 and |corr. coef.| >1 found for unique Stable Saddle-Path
+
+No correlation term with pvalue <0 and |corr. coef.| >1 found for NO unique Stable Saddle-Path
+
+No correlation term with pvalue <0 and |corr. coef.| >1 found for NO indeterminacy
+
+No correlation term with pvalue <0 and |corr. coef.| >1 found for indeterminacy
+Computing theoretical moments ...
+
+... done !
+
+==== Identification analysis ====
+
+Testing prior mean
+  
+WARNING !!!
+The rank of H (model) is deficient!
+
+
+
+psi1 is collinear w.r.t. all other params!
+psi2 is collinear w.r.t. all other params!
+rhoR is collinear w.r.t. all other params!
+std_R is collinear w.r.t. all other params!
+
+WARNING !!!
+The rank of J (moments) is deficient!
+
+
+
+psi1 is collinear w.r.t. all other params!
+psi2 is collinear w.r.t. all other params!
+rhoR is collinear w.r.t. all other params!
+std_R is collinear w.r.t. all other params!
+
+Press ENTER to print advanced diagnostics
+
+Collinearity patterns with 1 parameter(s)
+Parameter       [ Expl. params   ]       cosn
+tau             [ kap            ]      0.6857624
+kap             [ tau            ]      0.6857624
+psi1            [ psi2           ]      0.9497594
+psi2            [ psi1           ]      0.9497594
+rhoR            [ rhoz           ]      0.5398808
+rhog            [ std_g          ]      0.7739573
+rhoz            [ std_z          ]      0.9443559
+rr_steady       [ gam_steady     ]      0.9208807
+pi_steady       [ gam_steady     ]      0.6859943
+gam_steady      [ rr_steady      ]      0.9208807
+std_R           [ psi2           ]      0.7948514
+std_g           [ rhog           ]      0.7739573
+std_z           [ rhoz           ]      0.9443559
+
+Collinearity patterns with 2 parameter(s)
+Parameter       [ Expl. params                   ]       cosn
+tau             [ kap             std_g          ]      0.8154068
+kap             [ tau             std_g          ]      0.7833978
+psi1            [ psi2            std_R          ]      0.9811420
+psi2            [ psi1            std_R          ]      0.9890797
+rhoR            [ psi2            rhoz           ]      0.8286794
+rhog            [ std_g           std_z          ]      0.7801758
+rhoz            [ std_g           std_z          ]      0.9731612
+rr_steady       [ rhoz            gam_steady     ]      0.9606217
+pi_steady       [ rhoz            rr_steady      ]      0.6977963
+gam_steady      [ rhoz            rr_steady      ]      0.9573686
+std_R           [ psi1            psi2           ]      0.9271278
+std_g           [ rhog            std_z          ]      0.7999385
+std_z           [ rhoz            std_g          ]      0.9757677
+
+Collinearity patterns with 3 parameter(s)
+Parameter       [ Expl. params                                   ]       cosn
+tau             [ kap             std_R           std_g          ]      0.9257725
+kap             [ tau             psi1            std_g          ]      0.8978083
+psi1            [ psi2            rhoR            std_R          ]      1.0000000
+psi2            [ psi1            rhoR            std_R          ]      1.0000000
+rhoR            [ psi1            psi2            std_R          ]      1.0000000
+rhog            [ rhoz            std_g           std_z          ]      0.8224432
+rhoz            [ rhog            std_g           std_z          ]      0.9778597
+rr_steady       [ kap             rhoz            gam_steady     ]      0.9714265
+pi_steady       [ kap             rhoz            rr_steady      ]      0.7058040
+gam_steady      [ kap             rhoz            rr_steady      ]      0.9683552
+std_R           [ psi1            psi2            rhoR           ]      1.0000000
+std_g           [ rhog            rhoz            std_z          ]      0.9117563
+std_z           [ rhog            rhoz            std_g          ]      0.9804295
+
+Press ENTER to plot advanced diagnostics
+
+
+==== Identification analysis completed ====
+
+
+Total computing time : 0h00m20s
+Note: warning(s) encountered in MATLAB/Octave code

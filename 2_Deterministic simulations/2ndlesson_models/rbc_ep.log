@@ -1,0 +1,22 @@
+Starting Dynare (version 4.5.5).
+Starting preprocessing of the model file ...
+Found 6 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+ - order 2
+Processing outputs ...
+done
+Preprocessing completed.
+
+STEADY-STATE RESULTS:
+
+k 		 19.2817
+y 		 1.6493
+L 		 0.31956
+c 		 1.26366
+A 		 1
+a 		 0
+Total computing time : 0h00m06s

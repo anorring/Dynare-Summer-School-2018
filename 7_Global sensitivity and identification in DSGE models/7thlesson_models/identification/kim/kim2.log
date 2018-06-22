@@ -1,0 +1,101 @@
+Starting Dynare (version 4.5.5).
+Starting preprocessing of the model file ...
+Found 5 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+ - order 2
+ - derivatives of Jacobian/Hessian w.r. to parameters
+Computing dynamic model derivatives:
+ - order 1
+ - order 2
+ - derivatives of Jacobian/Hessian w.r. to parameters
+Processing outputs ...
+done
+Preprocessing completed.
+[Warning: Some of the parameters have no value (dumpy) when using steady. If
+these parameters are not initialized in a steadystate file or a
+steady_state_model-block, Dynare may not be able to solve the model...] 
+
+STEADY-STATE RESULTS:
+
+c   		 0.28901
+k   		 11.4831
+i   		 0.143539
+a   		 0.1
+lam 		 3.99965
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+           0.996            0.996                0
+           1.014            1.014                0
+             Inf             -Inf                0
+             Inf             -Inf                0
+
+
+There are 3 eigenvalue(s) larger than 1 in modulus 
+for 3 forward-looking variable(s)
+
+The rank condition is verified.
+
+All parameter values in the specified ranges give unique saddle-path solution,
+and match prior IRF/moment restriction(s) if any!
+Computing theoretical moments ...
+
+... done !
+
+==== Identification analysis ====
+
+Testing prior mean
+Evaluating simulated moment uncertainty ... please wait
+Doing 100 replicas of length 300 periods.
+Simulated moment uncertainty ... done!
+  
+WARNING !!!
+The rank of H (model) is deficient!
+
+    dumpy is not identified in the model!
+    [dJ/d(dumpy)=0 for all tau elements in the model solution!]
+
+
+
+WARNING !!!
+The rank of J (moments) is deficient!
+
+    dumpy is not identified by J moments!
+    [dJ/d(dumpy)=0 for all J moments!]
+
+
+
+Press ENTER to print advanced diagnostics
+
+Collinearity patterns with 1 parameter(s)
+Parameter       [ Expl. params   ]       cosn
+alph            [ theta          ]      0.9999998
+phi             [ alph           ]      0.9998213
+theta           [ alph           ]      0.9999998
+dumpy           [ --             ]      0.0000000
+
+Collinearity patterns with 2 parameter(s)
+Parameter       [ Expl. params                   ]       cosn
+alph            [ phi             theta          ]      1.0000000
+phi             [ alph            theta          ]      0.9999927
+theta           [ alph            phi            ]      1.0000000
+dumpy           [ --              --             ]      0.0000000
+
+Collinearity patterns with 3 parameter(s)
+Parameter       [ Expl. params                                   ]       cosn
+alph            [ phi             theta           --             ]      1.0000000
+phi             [ alph            theta           --             ]      0.9999927
+theta           [ alph            phi             --             ]      1.0000000
+dumpy           [ --              --              --             ]      0.0000000
+
+Press ENTER to plot advanced diagnostics
+
+
+==== Identification analysis completed ====
+
+
+Total computing time : 0h00m19s
+Note: warning(s) encountered in MATLAB/Octave code

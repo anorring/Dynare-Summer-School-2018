@@ -1,0 +1,1747 @@
+Starting Dynare (version 4.5.5).
+Starting preprocessing of the model file ...
+Found 11 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+ - order 2
+Processing outputs ...
+done
+Preprocessing completed.
+ 
+NOW I DO STABILITY MAPPING and prepare sample for Reduced form Mapping
+ 
+Press ENTER to continue
+97.1% of the prior support gives unique saddle-path solution.
+ 0.0% of the prior support gives explosive dynamics.
+ 2.9% of the prior support gives indeterminacy.
+
+
+
+
+Smirnov statistics in driving unique solution
+Parameter            d-stat         p-value
+psi1                  0.912           0.000
+psi3                  0.622           0.000
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for unique Stable Saddle-Path
+
+
+
+
+
+Smirnov statistics in driving indeterminacy
+Parameter            d-stat         p-value
+psi1                  0.912           0.000
+psi3                  0.622           0.000
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for NO indeterminacy
+
+
+ 
+ANALYSIS OF REDUCED FORM COEFFICIENTS
+ 
+Press ENTER to continue
+
+[pie vs e_R]
+ALL MC samples are in the desired range [-Inf  Inf]!
+
+[pie vs lagged R]
+ALL MC samples are in the desired range [-Inf  Inf]!
+
+[R vs e_R]
+ALL MC samples are in the desired range [-Inf  Inf]!
+
+[R vs lagged R]
+ALL MC samples are in the desired range [-Inf  Inf]!
+ 
+THE PREVIOUS TWO CALLS COULD BE DONE TOGETHER
+BY USING THE COMBINED CALL
+ 
+dynare_sensitivity(redform=1,
+threshold_redform=[-inf inf], namendo=(pie,R), namexo=(e_R), namlagendo=(R));
+ 
+Press ENTER to continue
+ 
+MC FILTERING(rmse=1), TO MAP THE FIT FROM PRIORS
+Press ENTER to continue
+
+
+Starting sensitivity analysis
+for the fit of EACH observed series ...
+
+Deleting old SA figures...
+done !
+
+Computing RMSE's...
+... done!
+
+
+
+
+RMSE over the MC sample:
+Variable      min yr RMSE    max yr RMSE
+y_obs             0.58406      142.09163
+R_obs             0.77118      140.84725
+pie_obs           1.74250      276.84709
+dq                1.25177        1.57884
+de                1.59835       68.90415
+
+Sample filtered the 10% best RMSE's for each observed series ...
+
+
+RMSE ranges after filtering:
+
+
+RMSE ranges after filtering:
+                          best 10% filtered                   remaining 90%
+Variable               min             max             min             max  posterior mode
+y_obs              0.58406         0.73284         0.73342       142.09163             NaN
+R_obs              0.77118         1.02764         1.02769       140.84725             NaN
+pie_obs            1.74250         1.93938         1.93991       276.84709             NaN
+dq                 1.25177         1.25343         1.25344         1.57884             NaN
+de                 1.59835         1.64373         1.64375        68.90415             NaN
+
+
+
+R2 over the MC sample:
+Variable        min yr R2      max yr R2
+y_obs        -18534.39665        0.68683
+R_obs          -239.89750        0.99278
+pie_obs       -5654.07835        0.77597
+dq               -0.48549        0.06622
+de            -1606.83807        0.13485
+
+Sample filtered the 10% best R2's for each observed series ...
+
+R2 ranges after filtering:
+
+
+R2 ranges after filtering:
+                          best 10% filtered                   remaining 90%
+Variable               min             max             min             max  posterior mode
+y_obs              0.50696         0.68683    -18534.39665         0.50618             NaN
+R_obs              0.98718         0.99278      -239.89750         0.98717             NaN
+pie_obs            0.72249         0.77597     -5654.07835         0.72234             NaN
+dq                 0.06375         0.06622        -0.48549         0.06373             NaN
+de                 0.08502         0.13485     -1606.83807         0.08499             NaN
+
+
+These parameters do not affect significantly the fit of ANY observed series:
+SE_e_R   
+SE_e_q   
+SE_e_A   
+SE_e_ys  
+SE_e_pies
+psi2     
+rr       
+
+These parameters affect ONE single observed series:
+psi1     
+alpha    
+tau      
+
+These parameters affect MORE THAN ONE observed series: trade off exists!
+psi3     
+rho_R    
+k        
+rho_q    
+rho_A    
+rho_ys   
+rho_pies 
+
+
+
+Smirnov statistics in driving the fit of y_obs
+Parameter            d-stat         p-value
+tau                   0.417           0.000
+k                     0.259           0.000
+rho_ys                0.238           0.000
+alpha                 0.226           0.000
+rho_A                 0.172           0.000
+
+
+
+Correlation analysis for better fit of y_obs
+Parameters     corrcoef
+[alpha,tau]       0.374
+[k,tau]           0.397
+[k,rho_A]         0.335
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for worse fit of y_obs
+
+
+
+
+Smirnov statistics in driving the fit of R_obs
+Parameter            d-stat         p-value
+rho_R                 0.563           0.000
+rho_ys                0.533           0.000
+psi3                  0.182           0.000
+
+
+
+Correlation analysis for better fit of R_obs
+Parameters        corrcoef
+[rho_R,k]           -0.360
+[rho_A,rho_ys]      -0.338
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for worse fit of R_obs
+
+
+
+
+Smirnov statistics in driving the fit of pie_obs
+Parameter            d-stat         p-value
+rho_ys                0.550           0.000
+rho_R                 0.312           0.000
+psi1                  0.274           0.000
+rho_pies              0.230           0.000
+rho_A                 0.216           0.000
+psi3                  0.165           0.000
+
+
+
+Correlation analysis for better fit of pie_obs
+Parameters          corrcoef
+[psi1,rho_pies]        0.324
+[psi3,rho_pies]       -0.350
+[alpha,rho_pies]      -0.371
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for worse fit of pie_obs
+
+
+
+
+Smirnov statistics in driving the fit of dq
+Parameter            d-stat         p-value
+rho_q                 0.769           0.000
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for better fit of dq
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for worse fit of dq
+
+
+
+
+Smirnov statistics in driving the fit of de
+Parameter            d-stat         p-value
+rho_pies              0.406           0.000
+rho_q                 0.308           0.000
+rho_A                 0.282           0.000
+k                     0.211           0.000
+psi3                  0.204           0.000
+rho_ys                0.177           0.000
+rho_R                 0.172           0.000
+
+
+
+Correlation analysis for better fit of de
+Parameters         corrcoef
+[psi1,rho_pies]      -0.427
+[alpha,rho_ys]        0.329
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for worse fit of de
+
+ 
+THE PREVIOUS THREE CALLS COULD BE DONE TOGETHER
+BY USING THE COMBINED CALL
+ 
+dynare_sensitivity(redform=1,
+logtrans_redform=1, namendo=(pie,R), namexo=(e_R), namlagendo=(R),
+datafile=data_ca1.m,first_obs=8,nobs=79,prefilter=1,
+istart_rmse=2, rmse=1);
+ 
+Press ENTER to continue
+ 
+I ESTIMATE THE MODEL
+ 
+Press ENTER to continue
+Initial value of the log posterior (or likelihood): -761.2429
+-----------------
+f at the beginning of new iteration,       761.2429027747
+Predicted improvement:        3.256132928
+lambda =          1; f =          755.7548896
+lambda =     1.9332; f =          752.2274454
+lambda =     3.7372; f =          748.7524617
+Norm of dx   0.025519
+----
+Improvement on iteration 1 =       12.490441042
+-----------------
+f at the beginning of new iteration,       748.7524617325
+Predicted improvement:        2.535140366
+lambda =          1; f =          744.1226666
+lambda =     1.9332; f =          740.8168809
+lambda =     3.7372; f =          739.5940510
+Norm of dx   0.039439
+----
+Improvement on iteration 2 =        9.158410712
+-----------------
+f at the beginning of new iteration,       739.5940510200
+Predicted improvement:        4.188899101
+lambda =          1; f =          734.2370641
+Norm of dx   0.038049
+----
+Improvement on iteration 3 =        5.356986950
+-----------------
+f at the beginning of new iteration,       734.2370640705
+Predicted improvement:        6.827965222
+lambda =          1; f =          724.1378690
+lambda =     1.9332; f =          727.6889832
+lambda =     1.3017; f =          723.2171090
+Norm of dx   0.083117
+----
+Improvement on iteration 4 =       11.019955070
+-----------------
+f at the beginning of new iteration,       723.2171090008
+Predicted improvement:        3.717725179
+lambda =          1; f =          717.0747213
+lambda =     1.9332; f =          714.0887788
+Norm of dx   0.079246
+----
+Improvement on iteration 5 =        9.128330214
+-----------------
+f at the beginning of new iteration,       714.0887787868
+Predicted improvement:        6.135356236
+lambda =          1; f =          708.3634529
+Norm of dx    0.11153
+----
+Improvement on iteration 6 =        5.725325901
+-----------------
+f at the beginning of new iteration,       708.3634528859
+Predicted improvement:        3.177768112
+lambda =          1; f =          703.9822788
+Norm of dx   0.093363
+----
+Improvement on iteration 7 =        4.381174092
+-----------------
+f at the beginning of new iteration,       703.9822787935
+Predicted improvement:        1.727419442
+lambda =          1; f =          701.6687305
+Norm of dx    0.10711
+----
+Improvement on iteration 8 =        2.313548327
+-----------------
+f at the beginning of new iteration,       701.6687304667
+Predicted improvement:        1.811268725
+lambda =          1; f =          698.8290595
+lambda =     1.9332; f =          697.6997905
+Norm of dx   0.094156
+----
+Improvement on iteration 9 =        3.968939994
+-----------------
+f at the beginning of new iteration,       697.6997904722
+Predicted improvement:        2.569781246
+lambda =          1; f =          692.8775481
+lambda =     1.9332; f =          688.9833213
+lambda =     3.7372; f =          683.5334472
+lambda =     7.2247; f =          688.1096495
+lambda =     4.8647; f =          682.0867543
+Norm of dx   0.066291
+----
+Improvement on iteration 10 =       15.613036141
+-----------------
+f at the beginning of new iteration,       682.0867543312
+Predicted improvement:       11.683462683
+lambda =          1; f =          668.2131430
+Norm of dx    0.23528
+----
+Improvement on iteration 11 =       13.873611380
+-----------------
+f at the beginning of new iteration,       668.2131429514
+Predicted improvement:        1.555086623
+lambda =          1; f =          666.5219163
+Norm of dx     0.1014
+----
+Improvement on iteration 12 =        1.691226614
+-----------------
+f at the beginning of new iteration,       666.5219163373
+Predicted improvement:        1.326905071
+lambda =          1; f =          664.3343979
+lambda =     1.9332; f =          663.1533156
+Norm of dx   0.042506
+----
+Improvement on iteration 13 =        3.368600702
+-----------------
+f at the beginning of new iteration,       663.1533156353
+Predicted improvement:        4.585024943
+lambda =          1; f =          656.3306322
+lambda =     1.9332; f =          654.8281102
+Norm of dx    0.15567
+----
+Improvement on iteration 14 =        8.325205421
+-----------------
+f at the beginning of new iteration,       654.8281102140
+Predicted improvement:        1.800491045
+lambda =          1; f =          652.9067455
+Norm of dx   0.088264
+----
+Improvement on iteration 15 =        1.921364761
+-----------------
+f at the beginning of new iteration,       652.9067454534
+Predicted improvement:        0.959922633
+lambda =          1; f =          651.3904633
+lambda =     1.9332; f =          650.7606696
+Norm of dx   0.040603
+----
+Improvement on iteration 16 =        2.146075869
+-----------------
+f at the beginning of new iteration,       650.7606695843
+Predicted improvement:        0.453237145
+lambda =          1; f =          650.1767966
+Norm of dx   0.018352
+----
+Improvement on iteration 17 =        0.583872936
+-----------------
+f at the beginning of new iteration,       650.1767966484
+Predicted improvement:        0.226778772
+lambda =          1; f =          649.8563497
+lambda =     1.9332; f =          649.8087293
+Norm of dx   0.011861
+----
+Improvement on iteration 18 =        0.368067383
+-----------------
+f at the beginning of new iteration,       649.8087292655
+Predicted improvement:        0.195284534
+lambda =          1; f =          649.4510305
+lambda =     1.9332; f =          649.1752073
+lambda =     3.7372; f =          648.7941949
+Norm of dx  0.0095164
+----
+Improvement on iteration 19 =        1.014534408
+-----------------
+f at the beginning of new iteration,       648.7941948574
+Predicted improvement:        0.961557395
+lambda =          1; f =          647.2571114
+lambda =     1.9332; f =          646.5581219
+Norm of dx   0.076663
+----
+Improvement on iteration 20 =        2.236072913
+-----------------
+f at the beginning of new iteration,       646.5581219445
+Predicted improvement:        0.936507738
+lambda =          1; f =          645.0385630
+lambda =     1.9332; f =          644.2746534
+Norm of dx   0.083197
+----
+Improvement on iteration 21 =        2.283468554
+-----------------
+f at the beginning of new iteration,       644.2746533903
+Predicted improvement:        0.862054086
+lambda =          1; f =          643.0491885
+lambda =     1.9332; f =          642.7419692
+Norm of dx   0.061407
+----
+Improvement on iteration 22 =        1.532684222
+-----------------
+f at the beginning of new iteration,       642.7419691681
+Predicted improvement:        0.325743438
+lambda =          1; f =          642.2636631
+lambda =     1.9332; f =          642.1155731
+Norm of dx   0.012964
+----
+Improvement on iteration 23 =        0.626396066
+-----------------
+f at the beginning of new iteration,       642.1155731017
+Predicted improvement:        0.386316638
+lambda =          1; f =          641.4248901
+lambda =     1.9332; f =          640.9250551
+lambda =     3.7372; f =          640.3414300
+Norm of dx   0.035676
+----
+Improvement on iteration 24 =        1.774143145
+-----------------
+f at the beginning of new iteration,       640.3414299569
+Predicted improvement:        0.955890631
+lambda =          1; f =          638.7671126
+lambda =     1.9332; f =          638.0234439
+Norm of dx    0.11958
+----
+Improvement on iteration 25 =        2.317986012
+-----------------
+f at the beginning of new iteration,       638.0234439450
+Predicted improvement:        1.520434983
+lambda =          1; f =          635.6500198
+lambda =     1.9332; f =          635.2155625
+Norm of dx   0.079171
+----
+Improvement on iteration 26 =        2.807881491
+-----------------
+f at the beginning of new iteration,       635.2155624543
+Predicted improvement:        0.735720272
+lambda =          1; f =          634.7485313
+Norm of dx   0.090466
+----
+Improvement on iteration 27 =        0.467031131
+-----------------
+f at the beginning of new iteration,       634.7485313235
+Predicted improvement:        0.127504375
+lambda =          1; f =          634.5854345
+Norm of dx   0.020674
+----
+Improvement on iteration 28 =        0.163096867
+-----------------
+f at the beginning of new iteration,       634.5854344563
+Predicted improvement:        0.055134372
+lambda =          1; f =          634.5095123
+Norm of dx   0.026674
+----
+Improvement on iteration 29 =        0.075922178
+-----------------
+f at the beginning of new iteration,       634.5095122784
+Predicted improvement:        0.069432111
+lambda =          1; f =          634.3897355
+lambda =     1.9332; f =          634.3133849
+lambda =     3.7372; f =          634.2691294
+Norm of dx   0.016339
+----
+Improvement on iteration 30 =        0.240382885
+-----------------
+f at the beginning of new iteration,       634.2691293932
+Predicted improvement:        0.186456384
+lambda =          1; f =          633.9482185
+lambda =     1.9332; f =          633.7331350
+lambda =     3.7372; f =          633.5079691
+Norm of dx   0.014837
+----
+Improvement on iteration 31 =        0.761160303
+-----------------
+f at the beginning of new iteration,       633.5079690899
+Predicted improvement:        0.334181255
+lambda =          1; f =          633.1081726
+Norm of dx   0.056777
+----
+Improvement on iteration 32 =        0.399796502
+-----------------
+f at the beginning of new iteration,       633.1081725876
+Predicted improvement:        0.079169396
+lambda =          1; f =          633.0187218
+Norm of dx   0.030048
+----
+Improvement on iteration 33 =        0.089450802
+-----------------
+f at the beginning of new iteration,       633.0187217854
+Predicted improvement:        0.006127595
+lambda =          1; f =          633.0111322
+Norm of dx  0.0056018
+----
+Improvement on iteration 34 =        0.007589582
+-----------------
+f at the beginning of new iteration,       633.0111322033
+Predicted improvement:        0.001699985
+lambda =          1; f =          633.0084369
+lambda =     1.9332; f =          633.0071982
+Norm of dx  0.0015173
+----
+Improvement on iteration 35 =        0.003934000
+-----------------
+f at the beginning of new iteration,       633.0071982038
+Predicted improvement:        0.002892016
+lambda =          1; f =          633.0017535
+lambda =     1.9332; f =          632.9972835
+lambda =     3.7372; f =          632.9903356
+lambda =     7.2247; f =          632.9833710
+Norm of dx  0.0020669
+----
+Improvement on iteration 36 =        0.023827196
+-----------------
+f at the beginning of new iteration,       632.9833710074
+Predicted improvement:        0.023396339
+lambda =          1; f =          632.9409312
+lambda =     1.9332; f =          632.9091539
+lambda =     3.7372; f =          632.8691394
+Norm of dx   0.012902
+----
+Improvement on iteration 37 =        0.114231584
+-----------------
+f at the beginning of new iteration,       632.8691394234
+Predicted improvement:        0.043812405
+lambda =          1; f =          632.8233099
+Norm of dx   0.033279
+----
+Improvement on iteration 38 =        0.045829542
+-----------------
+f at the beginning of new iteration,       632.8233098817
+Predicted improvement:        0.001836610
+lambda =          1; f =          632.8211147
+Norm of dx  0.0018975
+----
+Improvement on iteration 39 =        0.002195185
+-----------------
+f at the beginning of new iteration,       632.8211146972
+Predicted improvement:        0.000586093
+lambda =          1; f =          632.8200941
+lambda =     1.9332; f =          632.8194149
+lambda =     3.7372; f =          632.8188465
+Norm of dx 0.00065739
+----
+Improvement on iteration 40 =        0.002268240
+-----------------
+f at the beginning of new iteration,       632.8188464575
+Predicted improvement:        0.001682019
+lambda =          1; f =          632.8155632
+lambda =     1.9332; f =          632.8126444
+lambda =     3.7372; f =          632.8074002
+lambda =     7.2247; f =          632.7987575
+lambda =     13.967; f =          632.7876857
+Norm of dx  0.0015554
+----
+Improvement on iteration 41 =        0.031160780
+-----------------
+f at the beginning of new iteration,       632.7876856775
+Predicted improvement:        0.019057335
+lambda =          1; f =          632.7654271
+Norm of dx   0.024933
+----
+Improvement on iteration 42 =        0.022258618
+-----------------
+f at the beginning of new iteration,       632.7654270597
+Predicted improvement:        0.001913318
+lambda =          1; f =          632.7629221
+Norm of dx  0.0065567
+----
+Improvement on iteration 43 =        0.002504975
+-----------------
+f at the beginning of new iteration,       632.7629220843
+Predicted improvement:        0.001000999
+lambda =          1; f =          632.7612337
+lambda =     1.9332; f =          632.7602156
+Norm of dx  0.0031536
+----
+Improvement on iteration 44 =        0.002706494
+-----------------
+f at the beginning of new iteration,       632.7602155905
+Predicted improvement:        0.002677539
+lambda =          1; f =          632.7554190
+lambda =     1.9332; f =          632.7519419
+lambda =     3.7372; f =          632.7479377
+Norm of dx  0.0060324
+----
+Improvement on iteration 45 =        0.012277847
+-----------------
+f at the beginning of new iteration,       632.7479377439
+Predicted improvement:        0.010320638
+lambda =          1; f =          632.7284689
+lambda =     1.9332; f =          632.7124186
+lambda =     3.7372; f =          632.6872797
+lambda =     7.2247; f =          632.6617095
+Norm of dx   0.015723
+----
+Improvement on iteration 46 =        0.086228195
+-----------------
+f at the beginning of new iteration,       632.6617095492
+Predicted improvement:        0.042084744
+lambda =          1; f =          632.5993641
+lambda =     1.9332; f =          632.5841243
+Norm of dx   0.040668
+----
+Improvement on iteration 47 =        0.077585221
+-----------------
+f at the beginning of new iteration,       632.5841243283
+Predicted improvement:        0.011039557
+lambda =          1; f =          632.5767611
+Norm of dx   0.035572
+----
+Improvement on iteration 48 =        0.007363224
+-----------------
+f at the beginning of new iteration,       632.5767611046
+Predicted improvement:        0.001599193
+lambda =          1; f =          632.5747760
+Norm of dx   0.007977
+----
+Improvement on iteration 49 =        0.001985072
+-----------------
+f at the beginning of new iteration,       632.5747760326
+Predicted improvement:        0.000610170
+lambda =          1; f =          632.5737213
+lambda =     1.9332; f =          632.5730377
+lambda =     3.7372; f =          632.5725619
+Norm of dx  0.0040545
+----
+Improvement on iteration 50 =        0.002214083
+-----------------
+f at the beginning of new iteration,       632.5725619496
+Predicted improvement:        0.001692967
+lambda =          1; f =          632.5692650
+lambda =     1.9332; f =          632.5663499
+lambda =     3.7372; f =          632.5611550
+lambda =     7.2247; f =          632.5527494
+lambda =     13.967; f =          632.5425535
+Norm of dx  0.0014626
+----
+Improvement on iteration 51 =        0.030008445
+-----------------
+f at the beginning of new iteration,       632.5425535042
+Predicted improvement:        0.009435455
+lambda =          1; f =          632.5312882
+Norm of dx   0.025391
+----
+Improvement on iteration 52 =        0.011265271
+-----------------
+f at the beginning of new iteration,       632.5312882332
+Predicted improvement:        0.000816009
+lambda =          1; f =          632.5303678
+Norm of dx  0.0076383
+----
+Improvement on iteration 53 =        0.000920388
+-----------------
+f at the beginning of new iteration,       632.5303678456
+Predicted improvement:        0.000054314
+lambda =          1; f =          632.5302919
+Norm of dx 0.00078879
+----
+Improvement on iteration 54 =        0.000075908
+-----------------
+f at the beginning of new iteration,       632.5302919373
+Predicted improvement:        0.000043620
+lambda =          1; f =          632.5302202
+lambda =     1.9332; f =          632.5301815
+Norm of dx 0.00065956
+----
+Improvement on iteration 55 =        0.000110428
+-----------------
+f at the beginning of new iteration,       632.5301815092
+Predicted improvement:        0.000086819
+lambda =          1; f =          632.5300211
+lambda =     1.9332; f =          632.5298952
+lambda =     3.7372; f =          632.5297172
+lambda =     7.2247; f =          632.5296156
+Norm of dx 0.00063137
+----
+Improvement on iteration 56 =        0.000565888
+-----------------
+f at the beginning of new iteration,       632.5296156213
+Predicted improvement:        0.000419203
+lambda =          1; f =          632.5288365
+lambda =     1.9332; f =          632.5282166
+lambda =     3.7372; f =          632.5273123
+lambda =     7.2247; f =          632.5266675
+Norm of dx  0.0012796
+----
+Improvement on iteration 57 =        0.002948118
+-----------------
+f at the beginning of new iteration,       632.5266675029
+Predicted improvement:        0.000237691
+lambda =          1; f =          632.5264043
+Norm of dx  0.0022402
+----
+Improvement on iteration 58 =        0.000263227
+-----------------
+f at the beginning of new iteration,       632.5264042764
+Predicted improvement:        0.000018179
+lambda =          1; f =          632.5263722
+lambda =     1.9332; f =          632.5263500
+lambda =     3.7372; f =          632.5263284
+Norm of dx 0.00043942
+----
+Improvement on iteration 59 =        0.000075913
+-----------------
+f at the beginning of new iteration,       632.5263283633
+Predicted improvement:        0.000061004
+lambda =          1; f =          632.5262082
+lambda =     1.9332; f =          632.5260994
+lambda =     3.7372; f =          632.5258982
+lambda =     7.2247; f =          632.5255432
+lambda =     13.967; f =          632.5249838
+lambda =         27; f =          632.5243765
+Norm of dx 0.00046739
+----
+Improvement on iteration 60 =        0.001951829
+-----------------
+f at the beginning of new iteration,       632.5243765348
+Predicted improvement:        0.001772917
+lambda =          1; f =          632.5211896
+lambda =     1.9332; f =          632.5188654
+lambda =     3.7372; f =          632.5161572
+Norm of dx   0.011137
+----
+Improvement on iteration 61 =        0.008219338
+-----------------
+f at the beginning of new iteration,       632.5161571969
+Predicted improvement:        0.002069482
+lambda =          1; f =          632.5137076
+Norm of dx   0.013234
+----
+Improvement on iteration 62 =        0.002449557
+-----------------
+f at the beginning of new iteration,       632.5137076395
+Predicted improvement:        0.000165935
+lambda =          1; f =          632.5134894
+Norm of dx  0.0014549
+----
+Improvement on iteration 63 =        0.000218231
+-----------------
+f at the beginning of new iteration,       632.5134894085
+Predicted improvement:        0.000096935
+lambda =          1; f =          632.5133202
+lambda =     1.9332; f =          632.5132068
+lambda =     3.7372; f =          632.5131094
+Norm of dx 0.00085639
+----
+Improvement on iteration 64 =        0.000380004
+-----------------
+f at the beginning of new iteration,       632.5131094046
+Predicted improvement:        0.000279644
+lambda =          1; f =          632.5125570
+lambda =     1.9332; f =          632.5120535
+lambda =     3.7372; f =          632.5111133
+lambda =     7.2247; f =          632.5094191
+lambda =     13.967; f =          632.5066070
+lambda =         27; f =          632.5029084
+Norm of dx  0.0016804
+----
+Improvement on iteration 65 =        0.010200959
+-----------------
+f at the beginning of new iteration,       632.5029084459
+Predicted improvement:        0.003056975
+lambda =          1; f =          632.4996471
+Norm of dx   0.029146
+----
+Improvement on iteration 66 =        0.003261297
+-----------------
+f at the beginning of new iteration,       632.4996471487
+Predicted improvement:        0.000050818
+lambda =          1; f =          632.4995799
+Norm of dx 0.00063408
+----
+Improvement on iteration 67 =        0.000067213
+-----------------
+f at the beginning of new iteration,       632.4995799359
+Predicted improvement:        0.000029430
+lambda =          1; f =          632.4995294
+lambda =     1.9332; f =          632.4994973
+lambda =     3.7372; f =          632.4994762
+Norm of dx 0.00030779
+----
+Improvement on iteration 68 =        0.000103698
+-----------------
+f at the beginning of new iteration,       632.4994762381
+Predicted improvement:        0.000074693
+lambda =          1; f =          632.4993274
+lambda =     1.9332; f =          632.4991894
+lambda =     3.7372; f =          632.4989253
+lambda =     7.2247; f =          632.4984247
+lambda =     13.967; f =          632.4974936
+lambda =         27; f =          632.4958311
+lambda =     52.196; f =          632.4931312
+lambda =      100.9; f =          632.4898321
+Norm of dx 0.00048089
+----
+Improvement on iteration 69 =        0.009644153
+-----------------
+f at the beginning of new iteration,       632.4898320855
+Predicted improvement:        0.007472861
+lambda =          1; f =          632.4781475
+lambda =     1.9332; f =          632.4732569
+Norm of dx   0.064606
+----
+Improvement on iteration 70 =        0.016575161
+-----------------
+f at the beginning of new iteration,       632.4732569244
+Predicted improvement:        0.002015508
+lambda =          1; f =          632.4709588
+Norm of dx   0.014722
+----
+Improvement on iteration 71 =        0.002298149
+-----------------
+f at the beginning of new iteration,       632.4709587753
+Predicted improvement:        0.000062840
+lambda =          1; f =          632.4708955
+Norm of dx  0.0013762
+----
+Improvement on iteration 72 =        0.000063263
+-----------------
+f at the beginning of new iteration,       632.4708955123
+Predicted improvement:        0.000000068
+lambda =          1; f =          632.4708955
+Norm of dx 0.00015094
+----
+Improvement on iteration 73 =        0.000000045
+improvement < crit termination
+
+Final value of minus the log posterior (or likelihood):632.470895 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+     prior mean     mode    s.d. prior pstdev
+
+psi1     1.500   2.0123  0.3074 gamm  0.5000 
+psi2     0.250   0.1729  0.0991 gamm  0.1250 
+psi3     0.250   0.2687  0.0821 gamm  0.1250 
+rho_R    0.500   0.7359  0.0449 beta  0.2000 
+alpha    0.300   0.1468  0.0387 beta  0.1000 
+rr       2.500   2.0865  0.9106 gamm  1.0000 
+k        0.500   0.4339  0.1252 gamm  0.2500 
+tau      0.500   0.3082  0.0654 gamm  0.2000 
+rho_q    0.400   0.3380  0.1071 beta  0.2000 
+rho_A    0.500   0.4710  0.0341 beta  0.2000 
+rho_ys   0.800   0.9229  0.0175 beta  0.1000 
+rho_pies   0.700   0.3593  0.0770 beta  0.1500 
+
+standard deviation of shocks
+     prior mean     mode    s.d. prior pstdev
+
+e_R      1.253   0.3641  0.0359 invg  0.6551 
+e_q      2.507   1.2873  0.0998 invg  1.3103 
+e_A      1.253   0.7320  0.0909 invg  0.6551 
+e_ys     1.253   0.9630  0.2902 invg  0.6551 
+e_pies   1.880   1.6117  0.1246 invg  0.9827 
+
+
+Log data density [Laplace approximation] is -661.362310.
+
+Estimation::mcmc: Multiple chains mode.
+Estimation::mcmc: Searching for initial values...
+Estimation::mcmc: Initial values found!
+
+Estimation::mcmc: Write details about the MCMC... Ok!
+Estimation::mcmc: Details about the MCMC are available in ls2003/metropolis/ls2003_mh_history_0.mat
+
+
+Estimation::mcmc: Number of mh files: 1 per block.
+Estimation::mcmc: Total number of generated files: 2.
+Estimation::mcmc: Total number of iterations: 5000.
+Estimation::mcmc: Current acceptance ratio per chain: 
+                                                       Chain  1: 28.28%
+                                                       Chain  2: 31.42%
+Estimation::mcmc: Total number of MH draws per chain: 5000.
+Estimation::mcmc: Total number of generated MH files: 1.
+Estimation::mcmc: I'll use mh-files 1 to 1.
+Estimation::mcmc: In MH-file number 1 I'll start at line 3001.
+Estimation::mcmc: Finally I keep 2000 draws per chain.
+
+
+
+MCMC Inefficiency factors per block
+Parameter       Block 1     Block 2
+SE_e_R            9.445      83.841
+SE_e_q           23.188      33.082
+SE_e_A           30.304      59.963
+SE_e_ys          37.562     110.847
+SE_e_pies        12.432      24.405
+psi1             40.448      57.065
+psi2             58.698       6.953
+psi3             57.677      10.069
+rho_R            13.527      17.793
+alpha            48.671      60.630
+rr               27.738      48.567
+k                36.523      14.048
+tau              28.514      46.523
+rho_q            39.507       8.324
+rho_A            20.087      34.079
+rho_ys           27.563      79.744
+rho_pies         22.168      38.508
+
+Estimation::mcmc::diagnostics: Univariate convergence diagnostic, Brooks and Gelman (1998):
+    Parameter 1...  Done! 
+    Parameter 2...  Done! 
+    Parameter 3...  Done! 
+    Parameter 4...  Done! 
+    Parameter 5...  Done! 
+    Parameter 6...  Done! 
+    Parameter 7...  Done! 
+    Parameter 8...  Done! 
+    Parameter 9...  Done! 
+    Parameter 10...  Done! 
+    Parameter 11...  Done! 
+    Parameter 12...  Done! 
+    Parameter 13...  Done! 
+    Parameter 14...  Done! 
+    Parameter 15...  Done! 
+    Parameter 16...  Done! 
+    Parameter 17...  Done! 
+
+Estimation::marginal density: I'm computing the posterior mean and covariance...  Done!
+Estimation::marginal density: I'm computing the posterior log marginal density (modified harmonic mean)... Done!
+
+
+ESTIMATION RESULTS
+
+Log data density is -662.891882.
+
+parameters
+         prior mean   post. mean        90% HPD interval    prior       pstdev
+
+psi1          1.500       2.1086      1.6484      2.6919   gamm        0.5000
+psi2          0.250       0.2213      0.0729      0.3803   gamm        0.1250
+psi3          0.250       0.2768      0.1381      0.4029   gamm        0.1250
+rho_R         0.500       0.7317      0.6679      0.8071   beta        0.2000
+alpha         0.300       0.1602      0.1051      0.2106   beta        0.1000
+rr            2.500       2.4713      0.8723      3.9944   gamm        1.0000
+k             0.500       0.4931      0.2898      0.6518   gamm        0.2500
+tau           0.500       0.3538      0.2532      0.4605   gamm        0.2000
+rho_q         0.400       0.3407      0.1561      0.5163   beta        0.2000
+rho_A         0.500       0.4735      0.4191      0.5375   beta        0.2000
+rho_ys        0.800       0.9129      0.8866      0.9393   beta        0.1000
+rho_pies        0.700       0.3590      0.2280      0.4659   beta        0.1500
+
+standard deviation of shocks
+         prior mean   post. mean        90% HPD interval    prior       pstdev
+
+e_R           1.253       0.3821      0.3182      0.4359   invg        0.6551
+e_q           2.507       1.2981      1.1290      1.4933   invg        1.3103
+e_A           1.253       0.7890      0.6098      0.9942   invg        0.6551
+e_ys          1.253       1.1976      0.5731      1.7148   invg        0.6551
+e_pies        1.880       1.6368      1.4634      1.8368   invg        0.9827
+Estimation::mcmc: Posterior (dsge) IRFs...
+Estimation::mcmc: Posterior IRFs, done!
+Estimation::mcmc: Smoothed variables
+Estimation::mcmc: Smoothed variables, done!
+Estimation::mcmc: Smoothed shocks
+Estimation::mcmc: Smoothed shocks, done!
+Estimation::mcmc: Trend_coefficients
+Estimation::mcmc: Trend_coefficients, done!
+Estimation::mcmc: Smoothed constant
+Estimation::mcmc: Smoothed constant, done!
+Estimation::mcmc: Smoothed trend
+Estimation::mcmc: Smoothed trend, done!
+Estimation::mcmc: Updated Variables
+Estimation::mcmc: Updated Variables, done!
+Estimation::mcmc: One step ahead forecast (filtered variables)
+Estimation::mcmc: One step ahead forecast (filtered variables), done!
+ 
+WE DO STABILITY MAPPING AGAIN, EXPLORING AROUND THE MODE BY A WIDTH +- 0.2 times the mode
+THEN WE DO RMSE analysis in this neighborhood
+Typical for ML estimation, also feasible for posterior mode
+ 
+Press ENTER to continue
+
+
+stab_map_:: the calibrated value of param psi2 for neighborhood_width sampling is outside prior bounds.
+We allow violation of bounds for this parameter, but if this was not done on purpose, please change calibration before running neighborhood_width sampling
+
+stab_map_:: the calibrated value of param psi3 for neighborhood_width sampling is outside prior bounds.
+We allow violation of bounds for this parameter, but if this was not done on purpose, please change calibration before running neighborhood_width sampling
+
+stab_map_:: the calibrated value of param alpha for neighborhood_width sampling is outside prior bounds.
+We allow violation of bounds for this parameter, but if this was not done on purpose, please change calibration before running neighborhood_width sampling
+
+stab_map_:: the calibrated value of param rho_ys for neighborhood_width sampling is outside prior bounds.
+We allow violation of bounds for this parameter, but if this was not done on purpose, please change calibration before running neighborhood_width sampling
+70.9% of the prior support gives unique saddle-path solution.
+29.1% of the prior support gives explosive dynamics.
+
+
+
+
+Smirnov statistics in driving unique solution
+Parameter            d-stat         p-value
+rho_ys                1.000           0.000
+
+
+
+
+
+
+Smirnov statistics in driving instability
+Parameter            d-stat         p-value
+rho_ys                1.000           0.000
+
+
+
+
+
+Starting sensitivity analysis
+for the fit of EACH observed series ...
+
+Deleting old SA figures...
+done !
+
+Computing RMSE's...
+... done!
+
+
+
+
+RMSE over the MC sample:
+Variable      min yr RMSE    max yr RMSE
+y_obs             0.62584        2.24747
+R_obs             0.80353        1.37321
+pie_obs           1.82553        3.32487
+dq                1.25191        1.26660
+de                1.62031        1.71093
+
+Sample filtered the 10% best RMSE's for each observed series ...
+
+
+RMSE ranges after filtering:
+
+
+RMSE ranges after filtering:
+                            best  filtered                       remaining
+Variable               min             max             min             max  posterior mean
+y_obs              0.62584         0.64773         0.64792         2.24747         1.50664
+R_obs              0.80353         0.84344         0.84346         1.37321         3.50631
+pie_obs            1.82553         1.85760         1.85767         3.32487         2.37197
+dq                 1.25191         1.25228         1.25228         1.26660         1.77056
+de                 1.62031         1.64654         1.64679         1.71093         2.12331
+
+
+
+R2 over the MC sample:
+Variable        min yr R2      max yr R2
+y_obs            -3.63717        0.64043
+R_obs             0.97710        0.99216
+pie_obs           0.18434        0.75411
+dq                0.04396        0.06601
+de                0.00867        0.11091
+
+Sample filtered the 10% best R2's for each observed series ...
+
+R2 ranges after filtering:
+
+
+R2 ranges after filtering:
+                            best  filtered                       remaining
+Variable               min             max             min             max  posterior mean
+y_obs              0.61483         0.64043        -3.63717         0.61461        -3.60586
+R_obs              0.99136         0.99216         0.97710         0.99136        -0.52318
+pie_obs            0.74540         0.75411         0.18434         0.74538        -0.13248
+dq                 0.06546         0.06601         0.04396         0.06545        -0.86935
+de                 0.08189         0.11091         0.00867         0.08160        -0.57816
+
+
+These parameters do not affect significantly the fit of ANY observed series:
+SE_e_R   
+SE_e_q   
+SE_e_pies
+psi2     
+psi3     
+alpha    
+rr       
+
+These parameters affect ONE single observed series:
+SE_e_A   
+SE_e_ys  
+psi1     
+rho_q    
+rho_A    
+rho_pies 
+
+These parameters affect MORE THAN ONE observed series: trade off exists!
+rho_R    
+k        
+tau      
+rho_ys   
+
+
+
+Smirnov statistics in driving the fit of y_obs
+Parameter            d-stat         p-value
+rho_ys                0.433           0.000
+tau                   0.414           0.000
+k                     0.263           0.000
+SE_e_A                0.205           0.000
+SE_e_ys               0.169           0.001
+
+
+
+Correlation analysis for better fit of y_obs
+Parameters        corrcoef
+[rho_R,rho_ys]       0.386
+[k,rho_q]           -0.514
+[rho_A,rho_ys]      -0.547
+
+
+
+Correlation analysis for worse fit of y_obs
+Parameters          corrcoef
+[alpha,rho_pies]       0.161
+
+
+
+
+Smirnov statistics in driving the fit of R_obs
+Parameter            d-stat         p-value
+rho_R                 0.815           0.000
+rho_ys                0.327           0.000
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for better fit of R_obs
+
+
+
+Correlation analysis for worse fit of R_obs
+Parameters          corrcoef
+[alpha,rho_pies]       0.162
+
+
+
+
+Smirnov statistics in driving the fit of pie_obs
+Parameter            d-stat         p-value
+rho_ys                0.463           0.000
+rho_R                 0.435           0.000
+k                     0.309           0.000
+psi1                  0.249           0.000
+tau                   0.249           0.000
+rho_A                 0.188           0.000
+
+
+
+Correlation analysis for better fit of pie_obs
+Parameters        corrcoef
+[rho_A,rho_ys]       0.369
+
+
+
+Correlation analysis for worse fit of pie_obs
+Parameters          corrcoef
+[alpha,rho_pies]       0.179
+
+
+
+
+Smirnov statistics in driving the fit of dq
+Parameter            d-stat         p-value
+rho_q                 1.000           0.000
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for better fit of dq
+
+
+
+Correlation analysis for worse fit of dq
+Parameters          corrcoef
+[alpha,rho_pies]       0.157
+
+
+
+
+Smirnov statistics in driving the fit of de
+Parameter            d-stat         p-value
+rho_R                 0.646           0.000
+rho_ys                0.495           0.000
+rho_pies              0.185           0.000
+
+
+
+Correlation analysis for better fit of de
+Parameters    corrcoef
+[rr,tau]        -0.369
+
+
+
+Correlation analysis for worse fit of de
+Parameters          corrcoef
+[rho_R,rho_ys]         0.124
+[alpha,rho_pies]       0.141
+
+ 
+WE DO STABILITY MAPPING AGAIN, BUT FOR MULTIVARIATE SAMPLE AT THE POSTERIOR MODE (or ML) and Hessian (pprior=0 & ppost=0)
+Typical for ML estimation, also feasible for posterior mode
+ 
+Press ENTER to continue
+All parameter values in the specified ranges give unique saddle-path solution,
+and match prior IRF/moment restriction(s) if any!
+ 
+RMSE ANALYSIS FOR MULTIVARIATE SAMPLE AT THE POSTERIOR MODE
+ 
+Press ENTER to continue
+
+
+
+Starting sensitivity analysis
+for the fit of EACH observed series ...
+
+Deleting old SA figures...
+ls2003_rmse_mc_R_obs_1.eps
+ls2003_rmse_mc_R_obs_map.eps
+ls2003_rmse_mc_de_1.eps
+ls2003_rmse_mc_de_map.eps
+ls2003_rmse_mc_dq_1.eps
+ls2003_rmse_mc_dq_map.eps
+ls2003_rmse_mc_lnlik1.eps
+ls2003_rmse_mc_lnpost1.eps
+ls2003_rmse_mc_lnprior1.eps
+ls2003_rmse_mc_params_1.eps
+ls2003_rmse_mc_pie_obs_1.eps
+ls2003_rmse_mc_pie_obs_2.eps
+ls2003_rmse_mc_pie_obs_map.eps
+ls2003_rmse_mc_y_obs_1.eps
+ls2003_rmse_mc_y_obs_map.eps
+done !
+
+Computing RMSE's...
+... done!
+
+
+
+
+RMSE over the MC sample:
+Variable      min yr RMSE    max yr RMSE
+y_obs             0.61191        1.10025
+R_obs             0.82099        1.08595
+pie_obs           1.81640        2.11484
+dq                1.25177        1.40441
+de                1.66087        1.76616
+
+Sample filtered the 10% best RMSE's for each observed series ...
+
+
+RMSE ranges after filtering:
+
+
+RMSE ranges after filtering:
+                            best  filtered                       remaining
+Variable               min             max             min             max  posterior mean
+y_obs              0.61191         0.63795         0.63804         1.10025         1.50664
+R_obs              0.82099         0.86296         0.86308         1.08595         3.50631
+pie_obs            1.81640         1.84634         1.84641         2.11484         2.37197
+dq                 1.25177         1.25196         1.25196         1.40441         1.77056
+de                 1.66087         1.67577         1.67578         1.76616         2.12331
+
+
+
+R2 over the MC sample:
+Variable        min yr R2      max yr R2
+y_obs            -0.11134        0.65625
+R_obs             0.98568        0.99182
+pie_obs           0.67000        0.75657
+dq               -0.17539        0.06622
+de               -0.05636        0.06584
+
+Sample filtered the 10% best R2's for each observed series ...
+
+R2 ranges after filtering:
+
+
+R2 ranges after filtering:
+                            best  filtered                       remaining
+Variable               min             max             min             max  posterior mean
+y_obs              0.62637         0.65625        -0.11134         0.62627        -3.60586
+R_obs              0.99096         0.99182         0.98568         0.99095        -0.52318
+pie_obs            0.74847         0.75657         0.67000         0.74846        -0.13248
+dq                 0.06594         0.06622        -0.17539         0.06594        -0.86935
+de                 0.04900         0.06584        -0.05636         0.04899        -0.57816
+
+
+These parameters do not affect significantly the fit of ANY observed series:
+SE_e_R   
+SE_e_q   
+SE_e_A   
+SE_e_ys  
+SE_e_pies
+psi1     
+psi2     
+psi3     
+rho_R    
+alpha    
+rr       
+k        
+tau      
+rho_q    
+rho_A    
+rho_ys   
+rho_pies 
+
+These parameters affect ONE single observed series:
+
+These parameters affect MORE THAN ONE observed series: trade off exists!
+
+No correlation term with pvalue <0 and |corr. coef.| >0 found for better fit of y_obs
+
+No correlation term with pvalue <0 and |corr. coef.| >0 found for worse fit of y_obs
+
+No correlation term with pvalue <0 and |corr. coef.| >0 found for better fit of R_obs
+
+No correlation term with pvalue <0 and |corr. coef.| >0 found for worse fit of R_obs
+
+No correlation term with pvalue <0 and |corr. coef.| >0 found for better fit of pie_obs
+
+No correlation term with pvalue <0 and |corr. coef.| >0 found for worse fit of pie_obs
+
+No correlation term with pvalue <0 and |corr. coef.| >0 found for better fit of dq
+
+No correlation term with pvalue <0 and |corr. coef.| >0 found for worse fit of dq
+
+No correlation term with pvalue <0 and |corr. coef.| >0 found for better fit of de
+
+No correlation term with pvalue <0 and |corr. coef.| >0 found for worse fit of de
+ 
+THE LAST TWO CALLS COULD BE DONE TOGETHER
+BY USING THE COMBINED CALL
+ 
+dynare_sensitivity(pprior=0,Nsam=2048,alpha2_stab=0.4,mode_file=ls2003_mode,
+datafile=data_ca1.m,first_obs=8,nobs=79,prefilter=1,
+rmse=1, alpha2_rmse=0, alpha_rmse=0);
+ 
+Press ENTER to continue
+ 
+RMSE ANALYSIS FOR POSTERIOR MCMC sample (ppost=1)
+Needs a call to dynare_estimation to load all MH environment
+Press ENTER to continue
+
+
+
+Starting sensitivity analysis
+for the fit of EACH observed series ...
+
+Deleting old SA figures...
+done !
+
+Computing RMSE's...
+... done!
+
+
+
+
+RMSE over the MC sample:
+Variable      min yr RMSE    max yr RMSE
+y_obs             0.62600        0.70069
+R_obs             0.83576        0.97984
+pie_obs           1.81905        1.94093
+dq                1.25177        1.37589
+de                1.66124        1.75673
+
+Sample filtered the 10% best RMSE's for each observed series ...
+
+
+RMSE ranges after filtering:
+
+
+RMSE ranges after filtering:
+                            best  filtered                       remaining
+Variable               min             max             min             max  posterior mean
+y_obs              0.62600         0.64068         0.64068         0.70069         1.50664
+R_obs              0.83576         0.87023         0.87030         0.97984         3.50631
+pie_obs            1.81905         1.84518         1.84518         1.94093         2.37197
+dq                 1.25177         1.25203         1.25204         1.37589         1.77056
+de                 1.66124         1.67474         1.67481         1.75673         2.12331
+
+
+
+R2 over the MC sample:
+Variable        min yr R2      max yr R2
+y_obs             0.54927        0.64024
+R_obs             0.98834        0.99152
+pie_obs           0.72204        0.75585
+dq               -0.12814        0.06622
+de               -0.04511        0.06542
+
+Sample filtered the 10% best R2's for each observed series ...
+
+R2 ranges after filtering:
+
+
+R2 ranges after filtering:
+                            best  filtered                       remaining
+Variable               min             max             min             max  posterior mean
+y_obs              0.62317         0.64024         0.54927         0.62317        -3.60586
+R_obs              0.99080         0.99152         0.98834         0.99080        -0.52318
+pie_obs            0.74879         0.75585         0.72204         0.74879        -0.13248
+dq                 0.06583         0.06622        -0.12814         0.06582        -0.86935
+de                 0.05017         0.06542        -0.04511         0.05009        -0.57816
+
+
+These parameters do not affect significantly the fit of ANY observed series:
+psi2     
+rr       
+
+These parameters affect ONE single observed series:
+SE_e_q   
+SE_e_A   
+SE_e_ys  
+SE_e_pies
+psi3     
+rho_R    
+alpha    
+
+These parameters affect MORE THAN ONE observed series: trade off exists!
+SE_e_R   
+psi1     
+k        
+tau      
+rho_q    
+rho_A    
+rho_ys   
+rho_pies 
+
+
+
+Smirnov statistics in driving the fit of y_obs
+Parameter            d-stat         p-value
+tau                   0.447           0.000
+SE_e_ys               0.344           0.000
+rho_A                 0.340           0.000
+rho_ys                0.291           0.001
+
+
+
+Correlation analysis for better fit of y_obs
+Parameters         corrcoef
+[SE_e_ys,alpha]      -0.729
+[psi1,rho_R]          0.767
+[psi1,rho_A]          0.651
+[psi1,rho_ys]        -0.741
+[alpha,rho_ys]       -0.582
+[k,tau]               0.586
+[rho_A,rho_ys]       -0.733
+
+
+
+Correlation analysis for worse fit of y_obs
+Parameters         corrcoef
+[SE_e_R,psi1]         0.264
+[SE_e_R,rho_R]       -0.423
+[SE_e_R,k]            0.521
+[SE_e_R,tau]          0.328
+[SE_e_R,rho_ys]      -0.250
+[SE_e_A,psi2]         0.293
+[SE_e_A,rho_R]        0.276
+[SE_e_A,alpha]       -0.234
+[SE_e_A,rho_A]       -0.729
+[SE_e_A,rho_ys]       0.216
+[SE_e_ys,alpha]      -0.251
+[SE_e_ys,k]           0.291
+[SE_e_ys,tau]         0.759
+[psi1,psi3]           0.291
+[psi1,rho_R]          0.500
+[psi1,rho_ys]        -0.460
+[psi2,rho_R]          0.241
+[psi3,rho_R]          0.345
+[psi3,k]             -0.260
+[psi3,tau]           -0.289
+[psi3,rho_pies]      -0.257
+[rho_R,k]            -0.465
+[rho_R,tau]          -0.352
+[alpha,k]             0.451
+[alpha,tau]           0.327
+[alpha,rho_A]         0.353
+[alpha,rho_ys]       -0.528
+[k,tau]               0.648
+[tau,rho_A]           0.292
+[tau,rho_ys]         -0.282
+[rho_A,rho_ys]       -0.328
+
+
+
+
+Smirnov statistics in driving the fit of R_obs
+Parameter            d-stat         p-value
+rho_A                 0.487           0.000
+SE_e_q                0.467           0.000
+SE_e_A                0.462           0.000
+k                     0.380           0.000
+rho_ys                0.344           0.000
+SE_e_pies             0.287           0.001
+
+
+
+Correlation analysis for better fit of R_obs
+Parameters         corrcoef
+[SE_e_R,SE_e_A]      -0.614
+[SE_e_R,rho_R]       -0.675
+[SE_e_R,k]            0.741
+[SE_e_A,k]           -0.699
+[SE_e_ys,tau]         0.774
+[psi3,rr]            -0.605
+[psi3,rho_pies]      -0.584
+[rho_R,k]            -0.765
+[alpha,rho_ys]       -0.697
+[rr,tau]              0.609
+[rr,rho_ys]          -0.602
+[tau,rho_ys]         -0.586
+
+
+
+Correlation analysis for worse fit of R_obs
+Parameters          corrcoef
+[SE_e_R,psi1]          0.240
+[SE_e_R,rho_R]        -0.393
+[SE_e_R,k]             0.495
+[SE_e_R,tau]           0.297
+[SE_e_R,rho_ys]       -0.220
+[SE_e_A,psi2]          0.289
+[SE_e_A,rho_A]        -0.689
+[SE_e_ys,alpha]       -0.273
+[SE_e_ys,k]            0.214
+[SE_e_ys,tau]          0.752
+[psi1,psi3]            0.310
+[psi1,rho_R]           0.578
+[psi1,rho_ys]         -0.471
+[psi2,rho_R]           0.228
+[psi3,rho_R]           0.393
+[psi3,tau]            -0.278
+[psi3,rho_pies]       -0.234
+[rho_R,k]             -0.463
+[rho_R,tau]           -0.332
+[rho_R,rho_ys]        -0.217
+[alpha,k]              0.430
+[alpha,tau]            0.337
+[alpha,rho_A]          0.369
+[alpha,rho_ys]        -0.535
+[rr,rho_pies]         -0.272
+[k,tau]                0.560
+[tau,rho_A]            0.325
+[tau,rho_ys]          -0.277
+[rho_A,rho_ys]        -0.347
+[rho_A,rho_pies]       0.211
+
+
+
+
+Smirnov statistics in driving the fit of pie_obs
+Parameter            d-stat         p-value
+rho_R                 0.784           0.000
+psi1                  0.618           0.000
+k                     0.507           0.000
+SE_e_R                0.442           0.000
+psi3                  0.369           0.000
+rho_pies              0.347           0.000
+
+
+
+Correlation analysis for better fit of pie_obs
+Parameters        corrcoef
+[SE_e_ys,tau]        0.782
+[alpha,rho_ys]      -0.794
+
+
+
+Correlation analysis for worse fit of pie_obs
+Parameters           corrcoef
+[SE_e_R,psi1]           0.315
+[SE_e_R,rho_R]         -0.395
+[SE_e_R,k]              0.504
+[SE_e_R,tau]            0.293
+[SE_e_R,rho_ys]        -0.269
+[SE_e_A,psi2]           0.287
+[SE_e_A,rho_R]          0.223
+[SE_e_A,rho_A]         -0.721
+[SE_e_A,rho_ys]         0.245
+[SE_e_A,rho_pies]      -0.220
+[SE_e_ys,alpha]        -0.257
+[SE_e_ys,k]             0.279
+[SE_e_ys,tau]           0.762
+[psi1,psi3]             0.266
+[psi1,rho_R]            0.465
+[psi1,k]                0.256
+[psi1,rho_ys]          -0.473
+[psi2,rho_R]            0.238
+[psi3,rho_R]            0.335
+[psi3,k]               -0.214
+[psi3,tau]             -0.299
+[psi3,rho_pies]        -0.291
+[rho_R,k]              -0.362
+[rho_R,tau]            -0.328
+[alpha,k]               0.393
+[alpha,tau]             0.315
+[alpha,rho_A]           0.400
+[alpha,rho_ys]         -0.560
+[k,tau]                 0.579
+[tau,rho_A]             0.339
+[tau,rho_ys]           -0.299
+[rho_A,rho_ys]         -0.392
+
+
+
+
+Smirnov statistics in driving the fit of dq
+Parameter            d-stat         p-value
+rho_q                 0.844           0.000
+
+
+
+Correlation analysis for better fit of dq
+Parameters        corrcoef
+[SE_e_R,k]           0.584
+[SE_e_A,rho_A]      -0.748
+[SE_e_ys,tau]        0.775
+[psi1,rho_ys]       -0.642
+[rho_R,k]           -0.611
+
+
+
+Correlation analysis for worse fit of dq
+Parameters         corrcoef
+[SE_e_R,psi1]         0.239
+[SE_e_R,rho_R]       -0.412
+[SE_e_R,k]            0.479
+[SE_e_R,tau]          0.291
+[SE_e_R,rho_ys]      -0.236
+[SE_e_A,psi2]         0.293
+[SE_e_A,rho_R]        0.286
+[SE_e_A,alpha]       -0.212
+[SE_e_A,rho_A]       -0.687
+[SE_e_ys,alpha]      -0.242
+[SE_e_ys,k]           0.212
+[SE_e_ys,tau]         0.749
+[psi1,psi3]           0.311
+[psi1,rho_R]          0.533
+[psi1,rho_ys]        -0.464
+[psi2,rho_R]          0.245
+[psi3,rho_R]          0.358
+[psi3,k]             -0.214
+[psi3,tau]           -0.288
+[psi3,rho_pies]      -0.244
+[rho_R,k]            -0.438
+[rho_R,tau]          -0.361
+[alpha,k]             0.411
+[alpha,tau]           0.348
+[alpha,rho_A]         0.385
+[alpha,rho_ys]       -0.546
+[k,tau]               0.557
+[tau,rho_A]           0.317
+[tau,rho_ys]         -0.296
+[rho_A,rho_ys]       -0.373
+
+
+
+
+Smirnov statistics in driving the fit of de
+Parameter            d-stat         p-value
+psi1                  0.562           0.000
+rho_ys                0.527           0.000
+k                     0.367           0.000
+SE_e_R                0.333           0.000
+rho_q                 0.324           0.000
+tau                   0.302           0.000
+alpha                 0.291           0.001
+rho_pies              0.291           0.001
+
+
+
+Correlation analysis for better fit of de
+Parameters        corrcoef
+[SE_e_A,rho_A]      -0.620
+[SE_e_ys,tau]        0.836
+[rho_R,k]           -0.613
+
+
+
+Correlation analysis for worse fit of de
+Parameters          corrcoef
+[SE_e_R,rho_R]        -0.460
+[SE_e_R,k]             0.479
+[SE_e_R,tau]           0.294
+[SE_e_A,psi2]          0.303
+[SE_e_A,rho_R]         0.257
+[SE_e_A,alpha]        -0.240
+[SE_e_A,rho_A]        -0.706
+[SE_e_A,rho_ys]        0.242
+[SE_e_ys,alpha]       -0.245
+[SE_e_ys,tau]          0.741
+[psi1,psi3]            0.289
+[psi1,rho_R]           0.550
+[psi1,rho_ys]         -0.415
+[psi1,rho_pies]        0.218
+[psi2,rho_R]           0.251
+[psi2,alpha]          -0.209
+[psi3,rho_R]           0.335
+[psi3,k]              -0.262
+[psi3,tau]            -0.322
+[psi3,rho_pies]       -0.280
+[rho_R,k]             -0.485
+[rho_R,tau]           -0.378
+[alpha,k]              0.386
+[alpha,tau]            0.353
+[alpha,rho_A]          0.397
+[alpha,rho_ys]        -0.531
+[k,tau]                0.548
+[tau,rho_A]            0.314
+[tau,rho_ys]          -0.276
+[rho_A,rho_ys]        -0.382
+[rho_A,rho_pies]       0.226
+
+Total computing time : 0h05m39s

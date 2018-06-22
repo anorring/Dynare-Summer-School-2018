@@ -1,0 +1,103 @@
+Starting Dynare (version 4.5.5).
+Starting preprocessing of the model file ...
+Found 5 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+
+STEADY-STATE RESULTS:
+
+y     		 1
+pie   		 1.005
+r     		 1.01515
+eps_a 		 1
+eps_b 		 1
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+        3.16e-17        -3.16e-17                0
+            0.82             0.82                0
+          0.8329           0.8329                0
+            0.85             0.85                0
+           1.027            1.027                0
+           1.669            1.669                0
+             Inf              Inf                0
+
+
+There are 3 eigenvalue(s) larger than 1 in modulus 
+for 3 forward-looking variable(s)
+
+The rank condition is verified.
+
+
+MODEL SUMMARY
+
+  Number of variables:         5
+  Number of stochastic shocks: 3
+  Number of state variables:   4
+  Number of jumpers:           3
+  Number of static variables:  0
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables       eta_r     eta_a     eta_b
+eta_r        0.000100  0.000000  0.000000
+eta_a        0.000000  0.006400  0.000000
+eta_b        0.000000  0.000000  0.002500
+
+POLICY AND TRANSITION FUNCTIONS
+                                   y             pie               r           eps_a           eps_b
+Constant                    1.000000        1.005000        1.015152        1.000000        1.000000
+r(-1)                      -6.312555       -1.435404        0.934367               0               0
+eps_a(-1)                   0.621929       -1.473244        0.002525        0.820000               0
+pie(-1)                    -0.446342       -0.101493        0.066066               0               0
+eps_b(-1)                   0.327154        0.063393        0.001328               0        0.850000
+eta_r                      -6.675208       -1.517867        0.988046               0               0
+eta_a                       0.758450       -1.796639        0.003080        1.000000               0
+eta_b                       0.384888        0.074580        0.001563               0        1.000000
+
+
+THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+y              1.0000     0.5421     0.2938
+pie            1.0050     0.2056     0.0423
+r              1.0152     0.0695     0.0048
+eps_a          1.0000     0.1398     0.0195
+eps_b          1.0000     0.0949     0.0090
+
+
+
+VARIANCE DECOMPOSITION (in percent)
+          eta_r   eta_a   eta_b
+y          4.95   94.78    0.27
+pie        1.78   98.15    0.07
+r          6.60   93.25    0.16
+eps_a      0.00  100.00    0.00
+eps_b      0.00    0.00  100.00
+
+
+
+MATRIX OF CORRELATIONS
+Variables         y     pie       r   eps_a   eps_b
+y            1.0000 -0.3612 -0.9842  0.7174  0.0454
+pie         -0.3612  1.0000  0.2079 -0.9087  0.0213
+r           -0.9842  0.2079  1.0000 -0.5962  0.0275
+eps_a        0.7174 -0.9087 -0.5962  1.0000  0.0000
+eps_b        0.0454  0.0213  0.0275  0.0000  1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order         1       2       3       4       5
+y        0.9755  0.9295  0.8700  0.8033  0.7335
+pie      0.7086  0.4882  0.3230  0.2005  0.1108
+r        0.9720  0.9236  0.8628  0.7954  0.7254
+eps_a    0.8200  0.6724  0.5514  0.4521  0.3707
+eps_b    0.8500  0.7225  0.6141  0.5220  0.4437
+Total computing time : 0h00m02s

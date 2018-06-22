@@ -1,0 +1,64 @@
+Starting Dynare (version 4.5.5).
+Starting preprocessing of the model file ...
+Substitution of Expectation operator: added 1 auxiliary variables and equations.
+Found 12 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+ - order 2
+ - order 3
+Processing outputs ...
+done
+Preprocessing completed.
+
+STEADY-STATE RESULTS:
+
+c                     		 2.5549
+d                     		 0.222808
+erp1                  		 0
+i                     		 1.08899
+k                     		 36.4813
+r1                    		 1.01114
+rf1                   		 1.01114
+w                     		 2.33209
+y                     		 3.64389
+z                     		 1
+mu                    		 8.03897
+
+MODEL SUMMARY
+
+  Number of variables:         12
+  Number of stochastic shocks: 1
+  Number of state variables:   3
+  Number of jumpers:           4
+  Number of static variables:  7
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables          ez
+ez           0.000100
+
+
+
+MOMENTS OF SIMULATED VARIABLES
+VARIABLE              MEAN       STD. DEV.        VARIANCE        SKEWNESS        KURTOSIS
+erp1              0.055963        0.005217        0.000027       -0.011670        0.016999
+rf1               0.986873        0.094759        0.008979        0.375541        0.281906
+r1                1.042836        0.099739        0.009948        0.357456        0.260219
+
+
+CORRELATION OF SIMULATED VARIABLES
+VARIABLE      erp1     rf1      r1
+erp1        1.0000  0.9521  0.9569
+rf1         0.9521  1.0000  0.9999
+r1          0.9569  0.9999  1.0000
+
+
+AUTOCORRELATION OF SIMULATED VARIABLES
+VARIABLE         1       2       3       4       5
+erp1        0.6118  0.3685  0.2159  0.1207  0.0737
+rf1         0.6376  0.4083  0.2614  0.1686  0.1194
+r1          0.6348  0.4040  0.2562  0.1630  0.1138
+Total computing time : 0h00m01s

@@ -1,0 +1,60 @@
+Starting Dynare (version 4.5.5).
+Starting preprocessing of the model file ...
+Substitution of endo lags >= 2: added 1 auxiliary variables and equations.
+Found 3 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+ - order 2
+Processing outputs ...
+done
+Preprocessing completed.
+
+STEADY-STATE RESULTS:
+
+c                		 0
+phi              		 0
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+             0.5           0.4755           0.1545
+             0.5           0.4755          -0.1545
+               1                1                0
+           2.333            2.333                0
+
+
+There are 1 eigenvalue(s) larger than 1 in modulus 
+for 1 forward-looking variable(s)
+
+The rank condition is verified.
+
+50.0% of the prior support gives unique saddle-path solution.
+ 0.0% of the prior support gives explosive dynamics.
+50.0% of the prior support gives indeterminacy.
+
+
+
+
+Smirnov statistics in driving unique solution
+Parameter            d-stat         p-value
+omega                 1.000           0.000
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for unique Stable Saddle-Path
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for NO unique Stable Saddle-Path
+
+
+
+
+Smirnov statistics in driving indeterminacy
+Parameter            d-stat         p-value
+omega                 1.000           0.000
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for NO indeterminacy
+
+No correlation term with pvalue <1e-05 and |corr. coef.| >0 found for indeterminacy
+
+Total computing time : 0h00m20s

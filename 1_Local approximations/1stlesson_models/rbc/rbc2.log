@@ -1,0 +1,88 @@
+Starting Dynare (version 4.5.5).
+Starting preprocessing of the model file ...
+Found 6 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+
+STEADY-STATE RESULTS:
+
+C 		 1.00307
+K 		 3.12572
+L 		 0.906515
+w 		 1.00307
+r 		 0.14545
+A 		 1
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+          0.7798           0.7798                0
+            0.97             0.97                0
+           1.321            1.321                0
+       9.688e+15        9.688e+15                0
+
+
+There are 2 eigenvalue(s) larger than 1 in modulus 
+for 2 forward-looking variable(s)
+
+The rank condition is verified.
+
+
+MODEL SUMMARY
+
+  Number of variables:         6
+  Number of stochastic shocks: 1
+  Number of state variables:   2
+  Number of jumpers:           2
+  Number of static variables:  2
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables           e
+e            0.000100
+
+POLICY AND TRANSITION FUNCTIONS
+                                   C               K               L               w               r               A
+Constant                    1.003068        3.125720        0.906515        1.003068        0.145450        1.000000
+K(-1)                       0.144417        0.779767       -0.105492        0.144417       -0.042512               0
+A(-1)                       0.757710        1.150136        0.589540        0.757710        0.204454        0.970000
+e                           0.781145        1.185707        0.607773        0.781145        0.210777        1.000000
+
+
+THEORETICAL MOMENTS
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+C              1.0031     0.0612     0.0037
+K              3.1257     0.2092     0.0438
+L              0.9065     0.0094     0.0001
+w              1.0031     0.0612     0.0037
+r              0.1454     0.0033     0.0000
+A              1.0000     0.0411     0.0017
+
+
+
+MATRIX OF CORRELATIONS
+Variables         C       K       L       w       r       A
+C            1.0000  0.9940  0.3134  1.0000 -0.0596  0.9830
+K            0.9940  1.0000  0.2077  0.9940 -0.1684  0.9571
+L            0.3134  0.2077  1.0000  0.3134  0.9293  0.4823
+w            1.0000  0.9940  0.3134  1.0000 -0.0596  0.9830
+r           -0.0596 -0.1684  0.9293 -0.0596  1.0000  0.1245
+A            0.9830  0.9571  0.4823  0.9830  0.1245  1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION
+Order         1       2       3       4       5
+C        0.9910  0.9777  0.9612  0.9423  0.9218
+K        0.9962  0.9868  0.9732  0.9564  0.9374
+L        0.7597  0.5729  0.4279  0.3154  0.2281
+w        0.9910  0.9777  0.9612  0.9423  0.9218
+r        0.7639  0.5803  0.4376  0.3267  0.2407
+A        0.9700  0.9409  0.9127  0.8853  0.8587
+Total computing time : 0h00m01s

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+rm -rf H.dat
+rm -rf g1.mat
+rm -rf rbc.log
+rm -rf rbc.m
+rm -rf rbc
+rm -rf rbc_CheckPlots1.eps
+rm -rf rbc_HistoricalAndSmoothedVariables1.eps
+rm -rf rbc_IRF_EfficiencyInnovation.eps
+rm -rf rbc_Priors1.eps
+rm -rf rbc_SmoothedShocks1.eps
+rm -rf rbc_dynamic.m
+rm -rf rbc_mode.mat
+rm -rf rbc_params.mat
+rm -rf rbc_pindx.mat
+rm -rf rbc_results.mat
+rm -rf rbc_set_auxiliary_variables.m
+rm -rf rbc_static.m
+rm -rf rbc_steadystate2.m
+rm -rf rbcdataset.m

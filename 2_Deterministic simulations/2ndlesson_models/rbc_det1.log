@@ -1,0 +1,35 @@
+Starting Dynare (version 4.5.5).
+Starting preprocessing of the model file ...
+Found 6 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+
+STEADY-STATE RESULTS:
+
+k 		 19.2817
+y 		 1.6493
+L 		 0.31956
+c 		 1.26366
+A 		 1
+a 		 0
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 9.448, 	 time = 0.022422
+Iter: 2,	 err. = 0.089316, 	 time = 0.009472
+Iter: 3,	 err. = 0.0044832, 	 time = 0.009817
+Iter: 4,	 err. = 5.3917e-06, 	 time = 0.01236
+
+Total time of simulation: 0.062801
+--------------------------------------------------------
+
+Perfect foresight solution found.
+
+Total computing time : 0h00m01s

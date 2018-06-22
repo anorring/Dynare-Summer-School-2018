@@ -1,0 +1,52 @@
+Starting Dynare (version 4.5.5).
+Starting preprocessing of the model file ...
+WARNING: nk3_ex5b.mod:79.1-11: periods: this command is now deprecated and may be removed in a future version of Dynare. Please use the ''periods'' option of the ''simul'' command instead.
+Found 5 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+
+STEADY-STATE RESULTS:
+
+y     		 1
+pie   		 1.005
+r     		 1.01515
+eps_a 		 1
+eps_b 		 1
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 0.08, 	 time = 0.010128
+Iter: 2,	 err. = 0.012463, 	 time = 0.004274
+Iter: 3,	 err. = 0.0014434, 	 time = 0.004332
+Iter: 4,	 err. = 0.00060638, 	 time = 0.004029
+Iter: 5,	 err. = 2.5754e-06, 	 time = 0.00594
+
+Total time of simulation: 0.035902
+--------------------------------------------------------
+
+Perfect foresight solution found.
+
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 0.08, 	 time = 0.003189
+Iter: 2,	 err. = 0.012203, 	 time = 0.003237
+Iter: 3,	 err. = 0.0069375, 	 time = 0.003363
+Iter: 4,	 err. = 0.00022647, 	 time = 0.004523
+Iter: 5,	 err. = 1.3453e-07, 	 time = 0.0054
+
+Total time of simulation: 0.025573
+--------------------------------------------------------
+
+Perfect foresight solution found.
+
+Total computing time : 0h00m01s
+Note: 1 warning(s) encountered in the preprocessor

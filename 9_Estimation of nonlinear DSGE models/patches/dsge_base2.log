@@ -1,0 +1,107 @@
+Starting Dynare (version 4.5.5).
+Starting preprocessing of the model file ...
+Found 6 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : NaN
+Equation number 2 : NaN
+Equation number 3 : NaN
+Equation number 4 : NaN
+Equation number 5 : NaN
+Equation number 6 : NaN
+
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('print_info', '/Applications/Dynare/4.5.5/matlab/print_info.m', 90)" style="font-weight:bold">print_info</a> (<a href="matlab: opentoline('/Applications/Dynare/4.5.5/matlab/print_info.m',90,0)">line 90</a>)
+The steady state contains NaN or Inf
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('steady', '/Applications/Dynare/4.5.5/matlab/steady.m', 104)" style="font-weight:bold">steady</a> (<a href="matlab: opentoline('/Applications/Dynare/4.5.5/matlab/steady.m',104,0)">line 104</a>)
+    print_info(info,options_.noprint, options_);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsge_base2', '/Users/anninorring/Documents/GitHub/DYNARE/Dynare Summer School 2018/9_Estimation of nonlinear DSGE models/patches/dsge_base2.m', 143)" style="font-weight:bold">dsge_base2</a> (<a href="matlab: opentoline('/Users/anninorring/Documents/GitHub/DYNARE/Dynare Summer School 2018/9_Estimation of nonlinear DSGE models/patches/dsge_base2.m',143,0)">line 143</a>)
+steady;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', '/Applications/Dynare/4.5.5/matlab/dynare.m', 235)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('/Applications/Dynare/4.5.5/matlab/dynare.m',235,0)">line 235</a>)
+evalin('base',fname) ;
+} 
+dynare dsge_base2
+
+Configuring Dynare ...
+[mex] Generalized QZ.
+[mex] Sylvester equation solution.
+[mex] Kronecker products.
+[mex] Sparse kronecker products.
+[mex] Local state space iteration (second order).
+[mex] Bytecode evaluation.
+[mex] k-order perturbation solver.
+[mex] k-order solution simulation.
+[mex] Quasi Monte-Carlo sequence (Sobol).
+[mex] Markov Switching SBVAR.
+
+Using 64-bit preprocessor
+Starting Dynare (version 4.5.5).
+Starting preprocessing of the model file ...
+Found 6 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+
+{Brace indexing is not
+supported for variables of
+this type.
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsge_base2_steadystate', '/Users/anninorring/Documents/GitHub/DYNARE/Dynare Summer School 2018/9_Estimation of nonlinear DSGE models/patches/dsge_base2_steadystate.m', 13)" style="font-weight:bold">dsge_base2_steadystate</a> (<a href="matlab: opentoline('/Users/anninorring/Documents/GitHub/DYNARE/Dynare Summer School 2018/9_Estimation of nonlinear DSGE models/patches/dsge_base2_steadystate.m',13,0)">line
+13</a>)
+        load_parameters = [
+        load_parameters
+        M_.param_names{i} '
+        = M_.params('
+        int2str(i) '); '];
+        
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('evaluate_steady_state_file', '/Applications/Dynare/4.5.5/matlab/evaluate_steady_state_file.m', 52)" style="font-weight:bold">evaluate_steady_state_file</a>
+(<a href="matlab: opentoline('/Applications/Dynare/4.5.5/matlab/evaluate_steady_state_file.m',52,0)">line 52</a>)
+    [ys,check] =
+    h_steadystate(ys_init,
+    exo_ss);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('evaluate_steady_state', '/Applications/Dynare/4.5.5/matlab/evaluate_steady_state.m', 212)" style="font-weight:bold">evaluate_steady_state</a> (<a href="matlab: opentoline('/Applications/Dynare/4.5.5/matlab/evaluate_steady_state.m',212,0)">line
+212</a>)
+    [ys,params,info] =
+    evaluate_steady_state_file(ys_init,exo_ss,M,
+    options,steadystate_check_flag);
+    
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('steady_', '/Applications/Dynare/4.5.5/matlab/steady_.m', 55)" style="font-weight:bold">steady_</a> (<a href="matlab: opentoline('/Applications/Dynare/4.5.5/matlab/steady_.m',55,0)">line 55</a>)
+[steady_state,params,info] =
+evaluate_steady_state(oo_.steady_state,M_,options_,oo_,~options_.steadystate.nocheck);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('steady', '/Applications/Dynare/4.5.5/matlab/steady.m', 81)" style="font-weight:bold">steady</a> (<a href="matlab: opentoline('/Applications/Dynare/4.5.5/matlab/steady.m',81,0)">line 81</a>)
+[steady_state,M_.params,info]
+= steady_(M_,options_,oo_);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dsge_base2', '/Users/anninorring/Documents/GitHub/DYNARE/Dynare Summer School 2018/9_Estimation of nonlinear DSGE models/patches/dsge_base2.m', 143)" style="font-weight:bold">dsge_base2</a> (<a href="matlab: opentoline('/Users/anninorring/Documents/GitHub/DYNARE/Dynare Summer School 2018/9_Estimation of nonlinear DSGE models/patches/dsge_base2.m',143,0)">line
+143</a>)
+steady;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', '/Applications/Dynare/4.5.5/matlab/dynare.m', 235)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('/Applications/Dynare/4.5.5/matlab/dynare.m',235,0)">line 235</a>)
+evalin('base',fname) ;
+} 
+clc
